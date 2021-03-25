@@ -21,8 +21,8 @@ class Usuarios extends BaseController
         $sql = "SELECT  *  FROM users";
         $dados = [
 
-            'styles' => ["vendor/datatables/dataTables.bootstrap4.min.css"],
-            'scripts' => [
+            'style' => ["vendor/datatables/dataTables.bootstrap4.min.css"],
+            'script' => [
                 "vendor/datatables/jquery.dataTables.min.js",
                 "vendor/datatables/dataTables.bootstrap4.min.js",
                 "vendor/datatables/app.js"

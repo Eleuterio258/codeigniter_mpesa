@@ -1,9 +1,6 @@
-<?php echo view('layout/sidebar'); ?>
-
 <!-- Main Content -->
 <div id="content">
 
-  <?php echo view('layout/navbar'); ?>
 
 
 
@@ -24,7 +21,7 @@
       <div class="card-body">
         <div class="table-responsive">
 
-        <form method="post" name="frmAdd" action="<?php echo site_url('Admin/clientes/store');?>">
+          <form method="post" name="frmAdd" action="<?php echo site_url('Admin/clientes/store'); ?>">
 
             <div class="form-group">
               <label>Fullname</label>
