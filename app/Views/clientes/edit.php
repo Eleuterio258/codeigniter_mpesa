@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url('usuarios'); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url('clientes'); ?>">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $titolo; ?></li>
             </ol>
         </nav>
@@ -19,14 +19,14 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="<?php echo base_url('usuarios'); ?>" class="btn btn-sm  btn-success float-right"><i class="fas fa-arrow-left"></i> Voltar</a>
+                <a href="<?php echo base_url('clientes'); ?>" class="btn btn-sm  btn-success float-right"><i class="fas fa-arrow-left"></i> Voltar</a>
             </div>
             <div class="card-body">
                 <form>
-                    <?php foreach ($product as $user) : ?>
+                    <?php foreach ($clientes as $cliente) : ?>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Username</label>
-                            <input type="text" class="form-control" value="<?php echo $user['username']; ?>">
+                            <label for="exampleInputEmail1">name</label>
+                            <input type="text" class="form-control" value="<?php echo $cliente['name']; ?>">
 
                         </div>
                         <div class="form-group">
@@ -37,7 +37,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" value="<?php echo $user['email']; ?>">
+                            <input type="email" class="form-control" value="<?php echo $cliente['email']; ?>">
 
                         </div>
 
@@ -50,16 +50,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label>Perfil de acesso</label>
-
-                            <select class="custom-select" name="perfil_usuario">
-                                <option value="1" <?php echo 2 ? 'selected' : '' ?>>Administrador</option>
-                                <option value="2" <?php echo 1 ? 'selected' : '' ?>>Supervisor</option>
-                                <option value="1" <?php echo 2 ? 'selected' : '' ?>>Vendedor</option>
-
-                            </select>
-                        </div>
+                 
 
                         <div>
                             <button type="submit" class="btn btn-primary">Submit</button>

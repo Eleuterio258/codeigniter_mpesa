@@ -19,7 +19,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="<?php echo base_url('novoAdmin'); ?>" class="btn btn-sm  btn-success float-right"><i class="fas fa-user-plus"></i> Novo</a>
+                <a href="<?php echo base_url('novocliente'); ?>" class="btn btn-sm  btn-success float-right"><i class="fas fa-user-plus"></i> Novo</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -27,25 +27,25 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Usuário</th>
-                                <th>role</th>
+                                <th>Nome</th>
+                                <th>Email</th>
                                 <th>status</th>
                                 <th class="text-right no-sort">Ações</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($usuarios as $user) : ?>
+                            <?php foreach ($clientes as $cliente) : ?>
                                 <tr>
-                                    <td> <?php echo  $user['id'] ?></td>
-                                    <td> <?php echo  $user['username'] ?></td>
-                                    <td> <?php echo  $user['role_id'] ?></td>
-                                    <td> <?php echo  $user['status'] == '1' ? 'Liberado' : 'Proibido' ?></td>
+                                    <td> <?php echo  $cliente['id'] ?></td>
+                                    <td> <?php echo  $cliente['fullname'] ?></td>
+                                    <td> <?php echo  $cliente['email'] ?></td>
+                                    <td> <?php echo  $cliente['status'] == '1' ? 'Liberado' : 'Proibido' ?></td>
 
                                     <td class="text-right">
-                                        <a href="<?php echo base_url('admin/usuarios/edit/' . $user['id']); ?>" class="btn btn-sm  btn-primary"><i class="fa fa-user-edit"></i></a>
+                                        <a href="<?php echo base_url('clientes/clientes/edit/' . $cliente['id']); ?>" class="btn btn-sm  btn-primary"><i class="fa fa-user-edit"></i></a>
                                         <a href="#" class="btn btn-sm  btn-success"><i class="fas fa-eye"></i></a>
-                                        <?php if ($user['status'] != '2 ||') : ?>
+                                        <?php if ($cliente['status'] != '2 ||') : ?>
                                             <a href="#" class="btn btn-sm  btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         <?php endif; ?>
 

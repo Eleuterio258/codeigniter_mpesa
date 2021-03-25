@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Controllers;
-
+namespace App\Controllers\Admin;
+use App\Controllers\BaseController;
 class Usuarios extends BaseController
 {
 
 
     public function __construct()
     {
-        (['html', 'form', 'estado']);
+        (['html', 'form']);
 
         $this->db = \Config\Database::connect();
     }
@@ -18,7 +18,7 @@ class Usuarios extends BaseController
 
 
 
-        $sql = "SELECT  *  FROM users u INNER JOIN roles r on u.role_id= r.idrole";
+        $sql = "SELECT  *  FROM users";
         $dados = [
 
             'styles' => ["vendor/datatables/dataTables.bootstrap4.min.css"],
@@ -28,7 +28,7 @@ class Usuarios extends BaseController
                 "vendor/datatables/app.js"
             ],
             'usuarios' => $this->db->query($sql)->getResultArray(),
-            'titolo' => "Lista de Usuários"
+            'titolo' => "Lista de usuarios"
         ];
 
         echo view('layout/header', $dados);
@@ -39,7 +39,7 @@ class Usuarios extends BaseController
 
     public function edit($id = null)
     {
-        $sql = "SELECT * FROM users u INNER JOIN roles r on u.role_id= r.idrole where id=$id";
+        $sql = "SELECT * FROM users where id=$id";
         $usuarios = $this->db->query($sql)->getResultArray();
 
         if (count($usuarios) == 0) {
@@ -54,7 +54,7 @@ class Usuarios extends BaseController
                     "vendor/datatables/app.js"
                 ],
 
-                'titolo' => "Editar Usuário"
+                'titolo' => "Editar usuarios"
             ];
         }
 
@@ -77,7 +77,7 @@ class Usuarios extends BaseController
                 "vendor/datatables/app.js"
             ],
            
-            'titolo' => "Novo Usuário"
+            'titolo' => "Novo usuarios"
         ];
         echo view('layout/header',$dados);
         echo view('usuarios/novo',$dados);

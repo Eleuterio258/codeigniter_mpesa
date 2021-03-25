@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url('usuarios'); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url('produtos'); ?>">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $titolo; ?></li>
             </ol>
         </nav>
@@ -19,14 +19,14 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="<?php echo base_url('usuarios'); ?>" class="btn btn-sm  btn-success float-right"><i class="fas fa-arrow-left"></i> Voltar</a>
+                <a href="<?php echo base_url('produtos'); ?>" class="btn btn-sm  btn-success float-right"><i class="fas fa-arrow-left"></i> Voltar</a>
             </div>
             <div class="card-body">
                 <form>
-                    <?php foreach ($product as $user) : ?>
+                <?php foreach ($usuarios as $user) : ?>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
-                            <input type="text" class="form-control" value="<?php echo $user['username']; ?>">
+                            <input type="text" class="form-control" ?>">
 
                         </div>
                         <div class="form-group">
@@ -37,7 +37,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" value="<?php echo $user['email']; ?>">
+                            <input type="email" class="form-control">
 
                         </div>
 
@@ -64,7 +64,7 @@
                         <div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
-                    <?php endforeach; ?>
+              <?php endforeach; ?>
                 </form>
             </div>
 
