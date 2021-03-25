@@ -90,7 +90,8 @@ class Clientes extends BaseController
             'password'  => $this->request->getVar('txtPassword'),
             'email'  => $this->request->getVar('txtEmail'),
             'phone'  => $this->request->getVar('txtPhone'),
-            'adress'  => $this->request->getVar('txtAdress')
+            'adress'  => $this->request->getVar('txtAdress'),
+            'status'  => $this->request->getVar('txtStatus')
         ];
 
         $save = $model->update($id, $data);

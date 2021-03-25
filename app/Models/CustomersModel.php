@@ -7,7 +7,7 @@ class CustomersModel extends Model {
 
     protected $table = 'customers';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['fullname','phone','email','adress','password' ];
+    protected $allowedFields = ['fullname','phone','email','adress','password','status' ];
 
 
 }

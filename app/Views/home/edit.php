@@ -2,11 +2,7 @@
 
 <!-- Main Content -->
 <div id="content">
-
 	<?php echo view('layout/navbar'); ?>
-
-
-
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
 		<nav aria-label="breadcrumb">
@@ -26,31 +22,32 @@
 			<div class="card-body">
 				<div class="table-responsive">
 
-					<form>
 
+					<form method="post" name="frmEdit" action="<?php echo base_url('Admin/clientes/update'); ?>">
+						<input type="hidden" name="id" class="form-control" id="id" value="<?php echo $employee['id'] ?>">
 						<div class="form-group">
 							<label>Fullname</label>
-							<input type="email" class="form-control" name="txtFname" value="<?php echo $employee['fullname']; ?>">
+							<input type="text" class="form-control" name="txtFullname" value="<?php echo $employee['fullname']; ?>">
 						</div>
 						<div class="form-group">
 							<label>Password</label>
-							<input type="email" class="form-control" name="txtFname" value="<?php echo $employee['password']; ?>">
+							<input type="password" class="form-control" name="txtPassword" value="<?php echo $employee['password']; ?>">
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input type="email" class="form-control" name="txtFname" value="<?php echo $employee['email']; ?>">
+							<input type="email" class="form-control" name="txtEmail" value="<?php echo $employee['email']; ?>">
 						</div>
 						<div class="form-group">
 							<label>Phone</label>
-							<input type="email" class="form-control" name="txtFname" value="<?php echo $employee['phone']; ?>">
+							<input type="text" class="form-control" name="txtPhone" value="<?php echo $employee['phone']; ?>">
 						</div>
 						<div class="form-group">
 							<label>Adress</label>
-							<input type="email" class="form-control" name="txtFname" value="<?php echo $employee['adress']; ?>">
+							<input type="text" class="form-control" name="txtAdress" value="<?php echo $employee['adress']; ?>">
 						</div>
 						<div class="form-group">
 							<label>Status</label>
-							<input type="email" class="form-control" name="txtFname" value="<?php echo $employee['status']; ?>">
+							<input type="text" class="form-control" name="txtStatus" value="<?php echo $employee['status']; ?>">
 						</div>
 
 						<div>
